@@ -1,0 +1,219 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Navbar styles */
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Navbar animation: hover effect */
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #ff9800;
+    transform: scale(1.1); /* Slightly enlarges the link on hover */
+}
+
+/* Hero section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.shutterstock.com/image-vector/kk-k-watercolor-letter-logo-260nw-633867206.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    min-height: 300px;
+    
+    /* Background zoom animation */
+    animation: zoomBackground 15s infinite alternate ease-in-out;
+}
+
+/* Hero section animations for text and button */
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: slideFadeIn 2s ease-out; /* Slide in from top */
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeIn 3s ease-out forwards; /* Fade in */
+}
+
+.hero .btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    animation: bounceButton 2s infinite; /* Bouncing button */
+}
+
+/* Seat cover list */
+#seat-cover-list {
+    margin: 20px;
+}
+
+.cover-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Zoom effect on hover for seat covers */
+.cover-item:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact form animations */
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Shake animation on form fields when clicked */
+form input:focus, form textarea:focus {
+    box-shadow: 0 0 5px rgba(255, 152, 0, 0.8);
+    animation: shake 0.3s ease-in-out;
+}
+
+/* Floating action button styles */
+.fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Floating action button hover effect */
+.fab:hover {
+    background-color: #555;
+}
+
+/* Animations */
+
+/* Background zoom animation */
+@keyframes zoomBackground {
+    0% {
+        background-size: contain;
+    }
+    100% {
+        background-size: 150%; /* Slow zoom-in to 150% */
+    }
+}
+
+/* Slide in and fade in effect for heading */
+@keyframes slideFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade in effect for paragraph */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Bounce effect for button */
+@keyframes bounceButton {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Shake effect for form fields */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+}
+
+/* Existing styles */
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
